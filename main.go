@@ -76,7 +76,7 @@ func main() {
 }
 
 func ready(s *discordgo.Session, event *discordgo.Ready) {
-	fmt.Println("Connected to Discord servers!")
+	fmt.Println("[ CONNECTED ] Araphor0 ")
 }
 
 // This is called on every message received
