@@ -124,6 +124,11 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 				Value:  "Access AraphorVPS using ~help in the vps-management channel",
 				Inline: true,
 			},
+			{
+				Name:   "AraphorBase",
+				Value:  "Access AraphorBase using #help in the coinbase-management channel",
+				Inline: true,
+			},
 		},
 	}
 	if strings.HasPrefix(m.Content, Prefix+"help") {
