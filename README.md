@@ -1,4 +1,4 @@
-# Foobar
+# Araphor0
 
 Araphor0 is a discord bot written in Golang.
 
