@@ -119,6 +119,11 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 				Value:  "Displays a quote from Ye.",
 				Inline: true,
 			},
+			{
+				Name:   "AraphorVPS",
+				Value:  "Access AraphorVPS using ~help in the vps-management channel",
+				Inline: true,
+			},
 		},
 	}
 	if strings.HasPrefix(m.Content, Prefix+"help") {
