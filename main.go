@@ -124,6 +124,11 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 				Value:  "Access AraphorVPS using ~help in the vps-management channel",
 				Inline: true,
 			},
+			{
+				Name:   "matthew",
+				Value:  "does this work?",
+				Inline: true,
+			},
 		},
 	}
 	if strings.HasPrefix(m.Content, Prefix+"help") {
@@ -163,5 +168,9 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 		}
 		//Convert the body to type string
 		s.ChannelMessageSend(m.ChannelID, string(body))
+	}
+
+	if strings.HasPrefix(m.Content, Prefix+"matthew") {
+		s.ChannelMessageSend(m.ChannelID, "Computer System Fastlane")
 	}
 }
