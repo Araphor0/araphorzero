@@ -125,7 +125,7 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 				Inline: true,
 			},
 			{
-				Name:   "matthew",
+				Name:   Prefix + "matthew",
 				Value:  "does this work?",
 				Inline: true,
 			},
