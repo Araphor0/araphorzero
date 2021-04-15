@@ -130,11 +130,6 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 				Value:  "does this work?",
 				Inline: true,
 			},
-			{
-				Name:   Prefix + "jose",
-				Value:  "Displays a quote from 'The Special One', Jose Mourinho",
-				Inline: true,
-			},
 		},
 	}
 	if strings.HasPrefix(m.Content, Prefix+"help") {
@@ -178,18 +173,5 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 
 	if strings.HasPrefix(m.Content, Prefix+"matthew") {
 		s.ChannelMessageSend(m.ChannelID, "Computer System Fastlane")
-	}
-
-	if strings.HasPrefix(m.Content, Prefix+"jose") {
-		resp, err := client.Get("https://jose-mourinho-quotes-api.polcius.now.sh/quote")
-		if resp != nil {
-			defer resp.Body.Close()
-		}
-		body, err := ioutil.ReadAll(resp.Body)
-		if err != nil {
-			s.ChannelMessageSend(m.ChannelID, "'The Special One' failed!")
-		}
-		s.ChannelMessageSend(m.ChannelID, string(body))
-
 	}
 }
