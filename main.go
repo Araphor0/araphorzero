@@ -138,7 +138,7 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 
 	// Generate a greeting message
 	if strings.HasPrefix(m.Content, Prefix+"hello") {
-		s.ChannelMessageSend(m.ChannelID, "Hello!")
+		s.ChannelMessageSend(m.ChannelID, "Hello! "+m.Author.Username)
 	}
 
 	// Generates a random number between 1 and 10
